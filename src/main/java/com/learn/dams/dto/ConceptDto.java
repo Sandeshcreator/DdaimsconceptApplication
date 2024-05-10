@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 
 public class ConceptDto {
-//    private long ID;
+    private long ID;
     private String identifier;
     private String label;
     private String active;

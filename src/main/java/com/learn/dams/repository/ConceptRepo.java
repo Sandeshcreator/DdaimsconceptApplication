@@ -7,7 +7,8 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface ConceptRepo extends CrudRepository<Concept, Long> {
+public interface ConceptRepo extends CrudRepository<Concept, Integer> {
+
 //	List<Concept> findByIdentifierIgnoreCase(String identifier);
 ////	 @Query(nativeQuery = true,value = "call onlyRoot")
 //	List<Concept> findAllRoots();
