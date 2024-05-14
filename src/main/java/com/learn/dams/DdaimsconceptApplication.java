@@ -1,5 +1,6 @@
 package com.learn.dams;
 
+import com.learn.dams.entities.Closure;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +16,11 @@ public class DdaimsconceptApplication {
 	@Bean
 	public ModelMapper modelMapper(){
 		return new ModelMapper();
+	}
+
+	@Bean
+	public Closure closure(){
+		return new Closure();
 	}
 
 }

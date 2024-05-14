@@ -2,14 +2,15 @@ package com.learn.dams.repository;
 
 
 import com.learn.dams.entities.Concept;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface ConceptRepo extends CrudRepository<Concept, Integer> {
+public interface ConceptRepo extends JpaRepository<Concept, Long> {
 
-//	List<Concept> findByIdentifierIgnoreCase(String identifier);
+	List<Concept> findByIdentifierIgnoreCase(String identifier);
 ////	 @Query(nativeQuery = true,value = "call onlyRoot")
 //	List<Concept> findAllRoots();
 //

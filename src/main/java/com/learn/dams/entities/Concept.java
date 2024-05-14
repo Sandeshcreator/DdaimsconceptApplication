@@ -28,4 +28,15 @@ public class Concept {
 
     @Column(name="Active", nullable=false, length=1)
     private boolean active = true;
+
+    public boolean getActive() {
+        return active;
+    }
+
+    public void setActive(boolean value) {
+        this.active = value;
+    }
+
+
+
 }

@@ -1,6 +1,7 @@
 package com.learn.dams.contollers;
 
 import com.learn.dams.dto.ClosureDto;
+import com.learn.dams.exception.ObjectNotFoundException;
 import com.learn.dams.services.ClosureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
@@ -14,10 +15,11 @@ public class ClosureController {
     @Autowired
     private ClosureService closureService;
 
-    @PostMapping("/{conceptId}")
-    public ResponseEntity<Void> createPost(@PathVariable Integer conceptId) throws ChangeSetPersister.NotFoundException {
-        closureService.createClosure(conceptId);
+    @PostMapping("/{conceptId}/{identifier}")
+    public ResponseEntity<Void> createPost(@PathVariable Long conceptId, @PathVariable String identifier) throws ChangeSetPersister.NotFoundException, ObjectNotFoundException {
+        closureService.createClosure(conceptId, identifier);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
 
 }
