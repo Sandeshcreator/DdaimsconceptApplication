@@ -57,7 +57,6 @@ public class ClosureServiceImpl implements ClosureService {
     @Transactional
     public Concept saveToTree(Concept parent, Concept node) throws ObjectNotFoundException {
         return saveToTreeFast(parent, node);
-
     }
 
     @Transactional
